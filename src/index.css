@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Lexend+Deca&family=Mooli&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ff-inclusiveSans {
+    font-family: 'Inclusive Sans', sans-serif;
+}
+
+.ff-moli {
+    font-family: 'Mooli', sans-serif;
+
+}
+
+.ff-lexend {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.f-light {
+    font-weight: 400;
+    /* font-size: large; */
+}
+
+.f-bold {
+    font-weight: 600;
+    font-size: medium;
+    margin-right: 5px;
+}
+
+.btn {
+    border: none;
+    width: 25%;
+    height: 70px;
+    background-color: rgb(62, 89, 116);
+    color: white;
+}
+
+.btn:hover {
+    background-color: rgb(46, 71, 93);
+}
+
+.fixed-width {
+    max-width: 230px;
+    max-height: 70px;
+    min-height: 30px;
+    height: 30px;
+    /* Adjust the width value as per your requirement */
+}
+
+.setedFormFields {
+    background-color: rgb(46, 71, 93);
+}
