@@ -51,13 +51,18 @@
 
 .p-body {
     width: 100%;
-    overflow: hidden;
     display: flex;
-    justify-content: center;
+
     align-items: center;
 }
 
 .template {
     padding: 3rem 2.5rem;
     transition: 0.3s;
+}
+
+@media (min-width: 601px) {
+    .p-body {
+        justify-content: center;
+    }
 }

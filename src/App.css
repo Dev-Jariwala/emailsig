@@ -178,8 +178,24 @@
     padding: 5px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
     .container {
         flex-direction: column;
+        height: unset;
+    }
+}
+
+@media (max-width: 600px) {
+    .buttons {
+        width: 80%;
+        text-align: center;
+    }
+
+    .create {
+        margin: 10px;
+    }
+
+    .p-body {
+        overflow-y: scroll;
     }
 }
