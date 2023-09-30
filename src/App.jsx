@@ -368,7 +368,6 @@ function App() {
                       template === "template1" ? "t-img" : "tn-img"
                     }`}
                     src="img/template1.png"
-                    
                     alt="temp1"
                   />
                   <h3 className="ff-moli">Template 1</h3>
@@ -384,10 +383,24 @@ function App() {
                       template === "template2" ? "t-img" : "tn-img"
                     }`}
                     src="img/template2.png"
-                    
                     alt="temp1"
                   />
                   <h3 className="ff-moli">Template 2</h3>
+                </div>
+                <div
+                  className={`temp-button ${
+                    template === "template3" ? "opc50" : ""
+                  }`}
+                  onClick={() => setTemplate("template3")}
+                >
+                  <img
+                    className={` ${
+                      template === "template3" ? "t-img" : "tn-img"
+                    }`}
+                    src="img/template1.png"
+                    alt="temp1"
+                  />
+                  <h3 className="ff-moli">Template 3</h3>
                 </div>
               </div>
             )}
@@ -462,29 +475,31 @@ function App() {
           </div>
         </form>
         <div className="email-container">
-          <Preview
-            template={template}
-            setTemplate={setTemplate}
-            formData={formData}
-            ref={tempBodyRef}
-          />{" "}
-          {/* Pass the ref */}
-          <div className="buttons">
-            <button
-              className="create ff-lexend"
-              onClick={(event) => copyEmailSignature(event)}
-            >
-              Copy Signature
-            </button>
-            <button
-              className="create ff-lexend"
-              onClick={(event) => copySourceCode(event)}
-            >
-              Copy Source Code
-            </button>
-            <button className="create ff-lexend" onClick={clearAllData}>
-              Clear All Data
-            </button>
+          <div className="p-scroll">
+            <Preview
+              template={template}
+              setTemplate={setTemplate}
+              formData={formData}
+              ref={tempBodyRef}
+            />{" "}
+            {/* Pass the ref */}
+            <div className="buttons">
+              <button
+                className="create ff-lexend"
+                onClick={(event) => copyEmailSignature(event)}
+              >
+                Copy Signature
+              </button>
+              <button
+                className="create ff-lexend"
+                onClick={(event) => copySourceCode(event)}
+              >
+                Copy Source Code
+              </button>
+              <button className="create ff-lexend" onClick={clearAllData}>
+                Clear All Data
+              </button>
+            </div>
           </div>
         </div>
       </div>

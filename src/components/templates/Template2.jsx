@@ -35,7 +35,13 @@ const Template2 = ({ formData }) => {
               padding: "10px 15px",
             }}
           >
-            <div style={{ marginBottom: "", textAlign: "center" }}>
+            <div
+              style={{
+                marginBottom: "",
+                textAlign: "center",
+                maxWidth: "350px",
+              }}
+            >
               {formData?.imgURL && (
                 <div>
                   <img
@@ -55,7 +61,7 @@ const Template2 = ({ formData }) => {
                 formData?.jobtitle ||
                 formData?.department ||
                 formData?.companyname) && (
-                <div style={{ textAlign: "center" }}>
+                <div style={{ textAlign: "center", maxWidth: "350px" }}>
                   {(formData?.firstname || formData?.lastname) && (
                     <h2>
                       {formData?.firstname} {formData?.lastname}
@@ -85,8 +91,8 @@ const Template2 = ({ formData }) => {
                     padding: "10px 15px 0",
                     ...borderTopStyle,
                     marginTop: "15px",
-                                      maxWidth: "280px",
-                                      textAlign:'left'
+                    maxWidth: "350px",
+                    textAlign: "left",
                   }}
                 >
                   {(formData?.mobilenumber || formData?.officenumber) && (
@@ -190,91 +196,82 @@ const Template2 = ({ formData }) => {
           formData?.instagram ||
           formData?.linkedin ||
           formData?.twitter) && (
-          <>
-            <tr>
-              <td
+          <tr>
+            <td
+              style={{
+                padding: "15px 0",
+                ...borderTopStyle,
+              }}
+            >
+              <div
                 style={{
-                  padding: "15px 0",
-                  ...borderTopStyle,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  maxWidth: "350px",
                 }}
               >
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  {formData?.facebook && formData?.facebook !== "" && (
-                    <div style={{ margin: "0 10px" }}>
-                      <a
-                        href={formData?.facebook}
-                        style={{ ...linkColorStyle }}
-                      >
-                        <img
-                          width="24"
-                          height="24"
-                          src={`https://img.icons8.com/ios-filled/48/${
-                            formData?.linkColor || "000000"
-                          }/facebook.png`}
-                          alt="marker"
-                        />
-                      </a>
-                    </div>
-                  )}
-                  {formData?.instagram && formData?.instagram !== "" && (
-                    <div style={{ margin: "0 10px" }}>
-                      <a
-                        href={formData?.instagram}
-                        style={{ ...linkColorStyle }}
-                      >
-                        <img
-                          width="24"
-                          height="24"
-                          src={`https://img.icons8.com/ios-filled/48/${
-                            formData?.linkColor || "000000"
-                          }/instagram.png`}
-                          alt="marker"
-                        />
-                      </a>
-                    </div>
-                  )}
-                  {formData?.twitter && formData?.twitter !== "" && (
-                    <div style={{ margin: "0 10px" }}>
-                      <a href={formData?.twitter} style={{ ...linkColorStyle }}>
-                        <img
-                          width="24"
-                          height="24"
-                          src={`https://img.icons8.com/ios-filled/48/${
-                            formData?.linkColor || "000000"
-                          }/twitter.png`}
-                          alt="marker"
-                        />
-                      </a>
-                    </div>
-                  )}
-                  {formData?.linkedin && formData?.linkedin !== "" && (
-                    <div style={{ margin: "0 10px" }}>
-                      <a
-                        href={formData?.linkedin}
-                        style={{ ...linkColorStyle }}
-                      >
-                        <img
-                          width="24"
-                          height="24"
-                          src={`https://img.icons8.com/ios-filled/48/${
-                            formData?.linkColor || "000000"
-                          }/linkedin.png`}
-                          alt="marker"
-                        />
-                      </a>
-                    </div>
-                  )}
-                </div>
-              </td>
-            </tr>
-          </>
-        )}
+                {formData?.facebook && formData?.facebook !== "" && (
+                  <div style={{ margin: "0 10px" }}>
+                    <a href={formData?.facebook} style={{ ...linkColorStyle }}>
+                      <img
+                        width="24"
+                        height="24"
+                        src={`https://img.icons8.com/ios-filled/48/${
+                          formData?.linkColor || "000000"
+                        }/facebook.png`}
+                        alt="marker"
+                      />
+                    </a>
+                  </div>
+                )}
+                {formData?.instagram && formData?.instagram !== "" && (
+                  <div style={{ margin: "0 10px" }}>
+                    <a href={formData?.instagram} style={{ ...linkColorStyle }}>
+                      <img
+                        width="24"
+                        height="24"
+                        src={`https://img.icons8.com/ios-filled/48/${
+                          formData?.linkColor || "000000"
+                        }/instagram.png`}
+                        alt="marker"
+                      />
+                    </a>
+                  </div>
+                )}
+                {formData?.twitter && formData?.twitter !== "" && (
+                  <div style={{ margin: "0 10px" }}>
+                    <a href={formData?.twitter} style={{ ...linkColorStyle }}>
+                      <img
+                        width="24"
+                        height="24"
+                        src={`https://img.icons8.com/ios-filled/48/${
+                          formData?.linkColor || "000000"
+                        }/twitter.png`}
+                        alt="marker"
+                      />
+                    </a>
+                  </div>
+                )}
+                {formData?.linkedin && formData?.linkedin !== "" && (
+                  <div style={{ margin: "0 10px" }}>
+                    <a href={formData?.linkedin} style={{ ...linkColorStyle }}>
+                      <img
+                        width="24"
+                        height="24"
+                        src={`https://img.icons8.com/ios-filled/48/${
+                          formData?.linkColor || "000000"
+                        }/linkedin.png`}
+                        alt="marker"
+                      />
+                    </a>
+                  </div>
+                )}
+              </div>
+            </td>
+          </tr>
+          )}
+        
       </tbody>
     </table>
   );

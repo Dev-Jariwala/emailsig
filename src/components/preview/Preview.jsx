@@ -3,6 +3,7 @@ import React, { forwardRef, useState } from "react";
 import "./preview.css";
 import Template1 from "../templates/Template1";
 import Template2 from "../templates/Template2";
+import Template3 from "../templates/Template3";
 
 const Preview = forwardRef(({ template, setTemplate, formData }, ref) => {
   const textColorStyle = {
@@ -32,6 +33,11 @@ const Preview = forwardRef(({ template, setTemplate, formData }, ref) => {
           )}
           {template === "template2" ? (
             <Template2 formData={formData}></Template2>
+          ) : (
+            <></>
+          )}
+          {template === "template3" ? (
+            <Template3 formData={formData}></Template3>
           ) : (
             <></>
           )}
